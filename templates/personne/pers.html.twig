@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for personne in personnes %}
+        <div class="card">
+            <h5 class="card-header">{{ personne.id }}</h5>
+            <div class="card-body">
+                <h5 class="card-title">{{ personne.firstname }} {{ personne.name }}</h5>
+                <p class="card-text">{{ personne.age }} ans </p>
+                <a
+                        href="{{ path('personne.detail', {id: personne.id}) }}"
+                        target="_blank"
+                        class="card-link">Détails</a>
+
+                <a
+                        href="{{ path('personne.delete', {id: personne.id}) }}"
+
+                        class="card-link">Delete</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
