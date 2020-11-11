@@ -7,9 +7,11 @@ use App\Entity\Personne;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Image;
 
 class PersonneType extends AbstractType
 {
@@ -20,6 +22,11 @@ class PersonneType extends AbstractType
             ->add('firstname')
             ->add('age')
             ->add('path')
+            ->add('image', FileType::class, [
+                'mapped' => false,
+                'required' => false,
+                'constraints'=>[ new Image()]
+            ] )
             ->add('hobbies')
 
             ->add('job', EntityType::class, [
@@ -39,6 +46,9 @@ class PersonneType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Personne::class,
+            'attr'=> [
+                'novalidate'=> 'novalidate',
+            ]
         ]);
     }
 }

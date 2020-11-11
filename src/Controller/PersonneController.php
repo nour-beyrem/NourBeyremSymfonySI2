@@ -181,8 +181,18 @@ class PersonneController extends AbstractController
         $form->remove('createdAt');
         $form->remove('updatedAt');
         $form->remove('pieceIdentite');
+        $form->remove('path');
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
+            $imageInfos = $form->get('image')->getData();
+            if($imageInfos){
+                $imageName = $imageInfos->getClientOriginalName();
+                $newImageName = md5(uniqid()).$imageName;
+                $imageInfos->move($this->getParameter('personne_directory'),
+                    $newImageName);
+                $personne->setPath('uploads/personne/'.$newImageName);
+            }
+
             $em= $this->getDoctrine()->getManager();
             $em->persist($personne);
             $em->flush();
@@ -205,8 +215,18 @@ class PersonneController extends AbstractController
         $form->remove('createdAt');
         $form->remove('updatedAt');
         $form->remove('pieceIdentite');
+        $form->remove('path');
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
+            $imageInfos = $form->get('image')->getData();
+            if($imageInfos){
+                $imageName = $imageInfos->getClientOriginalName();
+                $newImageName = md5(uniqid()).$imageName;
+                $imageInfos->move($this->getParameter('personne_directory'),
+                    $newImageName);
+                $personne->setPath('uploads/personne/'.$newImageName);
+            }
+
             $em= $this->getDoctrine()->getManager();
             $em->persist($personne);
             $em->flush();

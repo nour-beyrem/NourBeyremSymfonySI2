@@ -7,6 +7,7 @@ use App\Repository\PersonneRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=PersonneRepository::class)
@@ -24,16 +25,21 @@ class Personne
 
     /**
      * @ORM\Column(type="string", length=65)
+     * @Assert\NotBlank(message="vous devez spécifiez un nom ")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank(message="vous devez spécifiez un prenom ")
+     * @Assert\Length(min="3", max="50", minMessage="le nom doit etre suprérieure a 3 caractere", maxMessage="le nom doit etre inférieure a 50 caractere")
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="smallint")
+     * @Assert\NotBlank(message="vous devez spécifiez un age ")
+     * @Assert\Range(min="1", max="199", minMessage="vous ne pouvez pas avoir un age inf a 1 ", maxMessage="vous ne pouvez pas avoir un age sup a 199")
      */
     private $age;
 

@@ -32,7 +32,7 @@ class PieceIdentiteController extends AbstractController
             if ($form->isSubmitted()){
                 $em= $this->getDoctrine()->getManager();
                 $em->persist($piece);
-                $em->flush();
+                $em->flush(); 
                 $personne->setPieceIdentite($piece);
                 $em->persist($personne);
                 $em->flush();
