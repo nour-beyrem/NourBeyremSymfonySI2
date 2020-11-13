@@ -10,7 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eea1eb86-2e86-4bae-ad8a-5799398ccb86" name="Default Changelist" comment="personne validation" />
+    <list default="true" id="eea1eb86-2e86-4bae-ad8a-5799398ccb86" name="Default Changelist" comment="personne validation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PieceIdentiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PieceIdentiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/personne/detail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personne/detail.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -217,7 +221,8 @@
       <workItem from="1604920678055" duration="8531000" />
       <workItem from="1605037606942" duration="54000" />
       <workItem from="1605117043349" duration="8987000" />
-      <workItem from="1605132824912" duration="1689000" />
+      <workItem from="1605132824912" duration="2180000" />
+      <workItem from="1605259767833" duration="1448000" />
     </task>
     <task id="LOCAL-00001" summary="personne validation">
       <created>1605134483403</created>
@@ -226,7 +231,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605134483403</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="personne validation">
+      <created>1605134635568</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605134635568</updated>
+    </task>
+    <task id="LOCAL-00003" summary="personne validation">
+      <created>1605134690285</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605134690285</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,10 +300,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1601904440162" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1605134642374">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1605134783314">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1605134642374" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1605134783314" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1602511913898">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
